@@ -1,0 +1,561 @@
+/* ==== Global Reset ==== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0a0f1c;
+    color: #e8f0ff;
+    overflow-x: hidden;
+  }
+  
+  /* ==== Scrollbar ==== */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #00fff0, #0077ff);
+    border-radius: 5px;
+  }
+  
+  /* ==== Navbar ==== */
+  #navbar {
+    background: rgba(10, 15, 28, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+    transition: all 0.3s ease;
+  }
+  #navbar.scrolled {
+    background: rgba(10, 15, 28, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 255, 255, 0.3);
+  }
+  .navbar-brand .logo-badge {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #00eaff, #007bff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+  .navbar .brand-text {
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  .navbar .brand-text .accent {
+    color: #00f5ff;
+  }
+  .nav-link {
+    position: relative;
+    color: #e0e0e0 !important;
+    transition: 0.3s;
+  }
+  .nav-link:hover {
+    color: #00f5ff !important;
+    text-shadow: 0 0 10px #00f5ff;
+  }
+  .nav-cta {
+    border-color: #00f5ff !important;
+    color: #00f5ff !important;
+  }
+  .nav-cta:hover {
+    background: #00f5ff !important;
+    color: #0a0f1c !important;
+  }
+  
+  /* Scroll Progress Bar */
+  #scrollProgress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background: #00f5ff;
+    box-shadow: 0 0 10px #00f5ff;
+  }
+  
+  /* ==== Hero Section ==== */
+  .hero-section {
+    min-height: 100vh;
+    background: radial-gradient(circle at 30% 30%, rgba(0, 255, 255, 0.08), transparent 70%),
+                radial-gradient(circle at 80% 80%, rgba(0, 128, 255, 0.05), transparent 70%);
+    display: flex;
+    align-items: center;
+    padding: 120px 0 80px;
+  }
+  
+  .glow-title {
+    font-weight: 700;
+    text-shadow: 0 0 20px #00eaff;
+  }
+  .name-neon {
+    color: #00f5ff;
+    text-shadow: 0 0 15px #00f5ff, 0 0 25px #00f5ff;
+    animation: neonPulse 2s infinite alternate;
+  }
+  
+  @keyframes neonPulse {
+    from { text-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff; }
+    to { text-shadow: 0 0 25px #00eaff, 0 0 45px #00eaff; }
+  }
+  
+  .hero-buttons .btn-neon {
+    background: linear-gradient(90deg, #00eaff, #007bff);
+    border: none;
+    color: #0a0f1c;
+    font-weight: 600;
+    box-shadow: 0 0 15px #00f5ff;
+    transition: all 0.3s ease;
+  }
+  .hero-buttons .btn-neon:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #00f5ff;
+  }
+  
+  .hero-tags .badge-pill {
+    background: rgba(0, 255, 255, 0.1);
+    border: 1px solid #00f5ff;
+    color: #00f5ff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+  
+  .portrait-wrap {
+    position: relative;
+    display: inline-block;
+  }
+  .portrait-img {
+    width: 50%;
+    border-radius: 50%;
+    border: 5px solid rgba(0, 255, 255, 0.4);
+    transition: transform 0.4s ease;
+  }
+  .portrait-wrap:hover .portrait-img {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px #00f5ff;
+  }
+  .portrait-badge {
+    position: absolute;
+    bottom: 20px;
+    right: 25%;
+    background: #00f5ff;
+    color: #0a0f1c;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 20px;
+    animation: floatBadge 3s ease-in-out infinite;
+  }
+  @keyframes floatBadge {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+  }
+  
+  /* ==== Sections ==== */
+  .section-title {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #00f5ff;
+    text-shadow: 0 0 15px #00f5ff;
+  }
+  .section-sub {
+    text-align: center;
+    color: #ccc;
+    margin-bottom: 40px;
+  }
+  .section-bg {
+    background: rgba(255, 255, 255, 0.02);
+  }
+  .py-6 {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+  
+  /* ==== About ==== */
+  .glass {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+    transition: all 0.3s ease;
+  }
+  .glass:hover {
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
+    transform: scale(1.02);
+  }
+  .info-box strong {
+    display: block;
+    color: #00f5ff;
+  }
+  
+  /* ==== Skills ==== */
+  .skill-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 15px;
+    padding: 20px;
+    transition: 0.3s;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.05);
+  }
+  .skill-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+  }
+  .skill-icon {
+    font-size: 28px;
+    color: #00f5ff;
+  }
+  .skill-bar {
+    height: 6px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .skill-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #00f5ff, #007bff);
+    width: 0;
+    border-radius: 3px;
+    transition: width 2s ease;
+  }
+  .pct-bubble {
+    background: #00f5ff;
+    color: #0a0f1c;
+    font-size: 13px;
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-weight: bold;
+  }
+  
+  /* ==== Projects ==== */
+  .project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+    transition: 0.3s;
+  }
+  .project-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+  .project-card:hover img {
+    transform: scale(1.08);
+    filter: blur(1px);
+  }
+  .project-card .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    padding: 20px;
+    text-align: center;
+    transition: 0.4s ease;
+  }
+  .project-card:hover .overlay {
+    opacity: 1;
+  }
+  
+  /* ==== Contact ==== */
+  .contact-form input,
+  .contact-form textarea {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0,255,255,0.2);
+    color: #e8f0ff;
+  }
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    box-shadow: 0 0 10px #00f5ff;
+    border-color: #00f5ff;
+    outline: none;
+  }
+  .btn-accent {
+    background: linear-gradient(90deg, #00f5ff, #007bff);
+    border: none;
+    color: #0a0f1c;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+  .btn-accent:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00f5ff;
+  }
+  
+  /* ==== Footer ==== */
+  footer {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 14px;
+  }
+  footer .muted {
+    color: #aaa;
+  }
+  .social-icon {
+    color: #00f5ff;
+    font-size: 16px;
+    transition: 0.3s;
+  }
+  .social-icon:hover {
+    color: #fff;
+    text-shadow: 0 0 10px #00f5ff;
+  }
+
+
+
+/* إعدادات سكشن المشاريع */
+.projects {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #ffffff; /* لون أبيض متناسق مع الخلفية الغامقة */
+  position: relative;
+}
+
+/* حاوية الكروت */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 10px 0;
+}
+
+/* تصميم الكارد الاحترافي (Dark Premium Card) */
+.project-card {
+  background: #0f172a; /* لون داكن يتماشى مع خلفية موقعك */
+  border: 1px solid rgba(0, 243, 255, 0.15); /* إطار شفاف خفيف بلون السيان */
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+  text-align: left; /* بما إن مشاريعك بالإنجليزي */
+  direction: ltr;
+}
+
+/* تأثير الإضاءة والحركة عند تمرير الماوس (Hover) */
+.project-card:hover {
+  transform: translateY(-10px);
+  border-color: #00f3ff; /* الإطار ينور بالسيان بالكامل */
+  box-shadow: 0 15px 35px rgba(0, 243, 255, 0.2); /* توهج خفيف أسفل الكارد */
+}
+
+/* حاوية الصورة داخل الكارد */
+.project-img {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  background: #1e293b;
+}
+
+.project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+/* زووم خفيف للصورة عند الـ Hover */
+.project-card:hover .project-img img {
+  transform: scale(1.1);
+}
+
+/* محتوى الكارد الداخلي */
+.project-content {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.project-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.project-description {
+  font-size: 0.95rem;
+  color: #94a3b8; /* لون رمادي مريح للعين في القراءة */
+  line-height: 1.6;
+  margin-bottom: 25px;
+  flex-grow: 1;
+  /* الكود القادم بيثبت طول الوصف في 3 سطور عشان كل الكروت تطلع طول بعض بالظبط */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* أزرار الروابط */
+.project-links {
+  display: flex;
+  gap: 15px;
+}
+
+.proj-btn {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* مسافة بين الأيقونة والكتابة */
+  transition: all 0.3s ease;
+}
+
+/* زر جيت هاب - تصميم شفاف ومحايد */
+.github-btn {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.github-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #ffffff;
+}
+
+/* زر الموقع لايف - واخد لون الـ Cyan الفسفوري بتاع موقعك */
+.live-btn {
+  background: #00f3ff;
+  color: #0f172a; /* لون كتابة غامق عشان يظهر بوضوح فوق الزرار المنور */
+  border: 1px solid #00f3ff;
+}
+
+.live-btn:hover {
+  background: #00cbd7;
+  border-color: #00cbd7;
+  box-shadow: 0 0 15px rgba(0, 243, 255, 0.4); /* تأثير إضاءة للزرار */
+}
+
+
+
+/* ==========================================================================
+   تعديلات الاستجابة لجميع الشاشات (Responsive Design & Media Queries)
+   ========================================================================== */
+
+/* 1. تحسينات عامة على العناصر الأساسية */
+.portrait-img {
+  /* تعديل العرض ليكون مناسبًا للشاشات الصغيرة والكبيرة بدلاً من 50% الثابتة */
+  width: 100%;
+  max-width: 350px; 
+  height: auto;
+}
+
+.portrait-wrap {
+  text-align: center;
+  width: 100%;
+}
+
+.portrait-badge {
+  /* ضبط مكان الشارة ليكون متناسقًا عند تغير حجم الصورة */
+  right: 10%;
+}
+
+/* 2. شاشات اللابتوب والشاشات المتوسطة (أقل من 992 بكسل) */
+@media (max-width: 991.98px) {
+  .hero-section {
+    padding: 100px 0 60px;
+    text-align: center; /* تجميع العناصر في المنتصف لشاشات التابلت والموبايل */
+  }
+  
+  .hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .portrait-wrap {
+    margin-top: 40px;
+  }
+}
+
+/* 3. شاشات الموبايل العادية (أقل من 768 بكسل) */
+@media (max-width: 767.98px) {
+  /* تصغير العناوين الكبيرة حتى لا تخرج عن الشاشة */
+  .glow-title {
+    font-size: 2.2rem !important;
+  }
+  
+  .projects h2 {
+    font-size: 2rem;
+    margin-bottom: 35px;
+  }
+
+  /* جعل كروت المشاريع تأخذ المساحة كاملة بشكل مريح */
+  .projects-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  /* ضبط الحشوات (Padding) للسكاشن لتوفير مساحة رؤية أكبر */
+  .py-6 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  
+  .projects {
+    padding: 50px 15px;
+  }
+}
+
+/* 4. شاشات الموبايل الصغيرة جدًا (أقل航 من 480 بكسل) */
+@media (max-width: 479.98px) {
+  .glow-title {
+    font-size: 1.8rem !important;
+  }
+  
+  /* تحويل أزرار الكارد تحت بعضها إذا كانت أسماء الأزرار طويلة ولا تتسع بجانب بعضها */
+  .project-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .proj-btn {
+    width: 100%;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+/* 5. تحسين الرؤية على الشاشات الضخمة (أكبر من 1400 بكسل) */
+@media (min-width: 1400px) {
+  .projects-container {
+    grid-template-columns: repeat(3, 1fr); /* تثبيت 3 كروت في الصف لشكل أكثر تناسقًا */
+  }
+}

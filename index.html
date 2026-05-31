@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eslam | Front-End Developer</title>
+
+  <!-- Bootstrap & Fonts -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- ==== Navbar ==== -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <div class="logo-badge me-2">E</div>
+        <span class="brand-text"><span class="accent">Eslam Abdelnaby</span></span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a href="#hero" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="#" class="btn btn-outline-info nav-cta ms-2">Dashboard</a></li>
+        </ul>
+      </div>
+
+      <div id="scrollProgress"></div>
+    </div>
+  </nav>
+
+  <!-- ==== Hero Section ==== -->
+  <section id="hero" class="hero-section">
+    <div class="container text-center text-lg-start">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <h1 class="display-4 fw-bold glow-title">Hi, I’m <span class="name-neon">Eslam Abdelnaby</span></h1>
+          <h3 id="typewriter" class="mt-3"></h3>
+          <p class="lead mt-4">
+            I’m a passionate Front-End Developer specializing in React.js, focused on creating stunning, fast, and interactive web experiences.
+          </p>
+          <div class="hero-buttons mt-4">
+            <a href="#projects" class="btn btn-neon me-2">View My Work</a>
+            <a href="#contact" class="btn btn-outline-light">Contact Me</a>
+          </div>
+        </div>
+        <div class="col-lg-6 text-center">
+          <div class="portrait-wrap">
+            <img src="images/IMG-20250418-WA0013.jpg" class="portrait-img" alt="Eslam photo">
+            <span class="portrait-badge">React Developer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==== About ==== -->
+  <section id="about" class="py-6 section-bg">
+    <div class="container text-center">
+      <h2 class="section-title">About Me</h2>
+      <p class="section-sub">Who I Am & What I Do</p>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="glass p-4">
+            <p>
+              I'm a dedicated front-end developer with experience in building clean and responsive user interfaces. 
+              I love turning creative ideas into functional, animated, and interactive web pages. 
+              I always aim to deliver polished and user-friendly experiences with smooth animations and modern design trends.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==== Skills ==== -->
+  <section id="skills" class="py-6">
+    <div class="container text-center">
+      <h2 class="section-title">My Skills</h2>
+      <p class="section-sub">Technologies I Work With</p>
+
+      <div class="row g-4">
+        <!-- Each skill -->
+        <div class="col-md-6 col-lg-4">
+          <div class="skill-card">
+            <i class="fab fa-html5 skill-icon"></i>
+            <h5>HTML</h5>
+            <div class="skill-bar"><div class="skill-fill" data-percent="95%"></div></div>
+            <span class="pct-bubble">95%</span>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="skill-card">
+            <i class="fab fa-css3-alt skill-icon"></i>
+            <h5>CSS</h5>
+            <div class="skill-bar"><div class="skill-fill" data-percent="90%"></div></div>
+            <span class="pct-bubble">90%</span>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="skill-card">
+            <i class="fab fa-js skill-icon"></i>
+            <h5>JavaScript</h5>
+            <div class="skill-bar"><div class="skill-fill" data-percent="88%"></div></div>
+            <span class="pct-bubble">88%</span>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="skill-card">
+            <i class="fab fa-bootstrap skill-icon"></i>
+            <h5>Bootstrap</h5>
+            <div class="skill-bar"><div class="skill-fill" data-percent="80%"></div></div>
+            <span class="pct-bubble">80%</span>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="skill-card">
+            <i class="fab fa-react skill-icon"></i>
+            <h5>React.js</h5>
+            <div class="skill-bar"><div class="skill-fill" data-percent="85%"></div></div>
+            <span class="pct-bubble">85%</span>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="skill-card">
+            <i class="fab fa-github skill-icon"></i>
+            <h5>Git & GitHub</h5>
+            <div class="skill-bar"><div class="skill-fill" data-percent="90%"></div></div>
+            <span class="pct-bubble">90%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==== Projects ==== -->
+
+  <section id="projects" class="projects">
+    <h2>My Latest Projects</h2>
+    
+    <div class="projects-container">
+      
+      <div class="project-card">
+        <div class="project-img">
+          <img src="images\download (1).jpg" alt="E-Shop E-Commerce">
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">ُEazy_Bank</h3>
+          <p class="project-description">
+            A modern digital banking landing page built with semantic HTML5, CSS Grid/Flexbox, and Vanilla JavaScript. Features a fully responsive mobile navigation menu, smooth fade animations, and a pixel-perfect design.
+          </p>
+          <div class="project-links">
+            <a href="https://github.com/abdelnabyeslam95-sketch/eazy_bank" target="_blank" class="proj-btn github-btn">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://abdelnabyeslam95-sketch.github.io/eazy_bank/" target="_blank" class="proj-btn live-btn">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="project-card">
+        <div class="project-img">
+          <img src="images/gettyimages-621719576-612x612.jpg" alt="UNI-SYS ERP">
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">UNI-SYS ERP System</h3>
+          <p class="project-description">
+            An advanced University Management ERP solution built with React.js and Tailwind CSS. Features professional UI components, role-based dashboards for admins, doctors, and students with highly responsive tables and analytics.
+          </p>
+          <div class="project-links">
+            <a href="https://github.com/abdelnabyeslam95-sketch/Uni_System" target="_blank" class="proj-btn github-btn">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://abdelnabyeslam95-sketch.github.io/Uni_System/" target="_blank" class="proj-btn live-btn">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="project-card">
+        <div class="project-img">
+          <img src="images/WhatsApp Image 2025-10-11 at 18.11.06_61df944f.jpg" alt="Al-Andalus Shipping">
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Academia_Plus</h3>
+          <p class="project-description">
+            A dynamic programming courses platform built with HTML5, CSS3, Vanilla JavaScript, and Bootstrap. Features an organized educational layout, course filtering, interactive learning sections, and a fully responsive design for students.
+          </p>
+          <div class="project-links">
+            <a href="https://github.com/abdelnabyeslam95-sketch/academia_plus" target="_blank" class="proj-btn github-btn">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://abdelnabyeslam95-sketch.github.io/academia_plus/" target="_blank" class="proj-btn live-btn">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="project-card">
+        <div class="project-img">
+          <img src="images/kobe-collection-v0-qzmcaahqk6me1.webp" alt="Cinematic App">
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">ُE-Shop</h3>
+          <p class="project-description">
+            A dynamic e-commerce and shopping interface powered by React.js and Tailwind CSS. Implements detailed categories, custom product filters, fluid search functionality, and full shopping cart configurations.
+          </p>
+          <div class="project-links">
+            <a href="https://github.com/abdelnabyeslam95-sketch/e_shop" target="_blank" class="proj-btn github-btn">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://abdelnabyeslam95-sketch.github.io/e_shop/" target="_blank" class="proj-btn live-btn">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="project-card">
+        <div class="project-img">
+          <img src="https://images.unsplash.com/photo-1540350394557-8d14678e7f91?w=600" alt="To-Do List App">
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Advanced To-Do List</h3>
+          <p class="project-description">
+            A fully interactive task management web application built to master state management in React. Features dynamic CRUD operations, local storage persistence, and beautiful UI filters.
+          </p>
+          <div class="project-links">
+            <a href="https://github.com/abdelnabyeslam95-sketch/to-do-list" target="_blank" class="proj-btn github-btn">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://abdelnabyeslam95-sketch.github.io/to-do-list/" target="_blank" class="proj-btn live-btn">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="project-card">
+        <div class="project-img">
+          <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=600" alt="PharmaCare Dashboard">
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">PharmaCare Portal</h3>
+          <p class="project-description">
+            A professional pharmacy management and consultancy system that merges medical logistics with custom modern icon layouts, consultation forms, and prescription uploaded management.
+          </p>
+          <div class="project-links">
+            <a href="https://github.com/abdelnabyeslam95-sketch/Pharmacy" target="_blank" class="proj-btn github-btn">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://abdelnabyeslam95-sketch.github.io/Pharmacy/" target="_blank" class="proj-btn live-btn">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+  
+      
+<div class="project-card">
+  <div class="project-img">
+    
+    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600" alt="Restaurant System">
+  </div>
+  <div class="project-content">
+    <h3 class="project-title">Restaurant Management System</h3>
+    <p class="project-description">
+      An interactive restaurant platform built with HTML5, CSS3, and Vanilla JavaScript. Features a dynamic food menu with custom category filtering, a real-time responsive order simulation, and a smooth table reservation interface.
+    </p>
+    <div class="project-links">
+      <a href="https://github.com/abdelnabyeslam95-sketch/restaurant-system" target="_blank" class="proj-btn github-btn">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a href="https://abdelnabyeslam95-sketch.github.io/restaurant-system/" target="_blank" class="proj-btn live-btn">
+        <i class="fas fa-external-link-alt"></i> Live Demo
+      </a>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+  </section>
+
+
+  <!-- ==== Contact ==== -->
+  <section id="contact" class="py-6">
+    <div class="container text-center">
+      <h2 class="section-title">Contact Me</h2>
+      <p class="section-sub">Let's Connect & Work Together</p>
+      <form class="contact-form col-md-8 mx-auto">
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Your Name" required>
+        </div>
+        <div class="mb-3">
+          <input type="email" class="form-control" placeholder="Your Email" required>
+        </div>
+        <div class="mb-3">
+          <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-accent px-4">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ==== Footer ==== -->
+  <footer class="py-4 text-center">
+    <div class="container">
+      <div class="mb-3">
+        <a href="#hero" class="me-3">Home</a>
+        <a href="#about" class="me-3">About</a>
+        <a href="#skills" class="me-3">Skills</a>
+        <a href="#projects" class="me-3">Projects</a>
+        <a href="#contact" class="me-3">Contact</a>
+      </div>
+      <div class="mb-3">
+        <a href="https://www.facebook.com/share/1DgCNn3PFa/" class="social-icon me-3"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.linkedin.com/in/eslam-abdelnaby-054266379?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-icon me-3"><i class="fab fa-linkedin"></i></a>
+        <a href="https://api.github.com/users/eslameee223-alt/repos" class="social-icon me-3"><i class="fab fa-github"></i></a>
+        <a href="https://wtsi.me/201092568208" class="social-icon me-3"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      <p class="muted mb-0">&copy; 2025 Eslam Dev. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
