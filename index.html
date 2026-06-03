@@ -31,7 +31,7 @@
           <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
           <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
           <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-          <li class="nav-item"><a href="#" class="btn btn-outline-info nav-cta ms-2">Dashboard</a></li>
+        
         </ul>
       </div>
 
@@ -64,86 +64,132 @@
     </div>
   </section>
 
-  <!-- ==== About ==== -->
-  <section id="about" class="py-6 section-bg">
-    <div class="container text-center">
-      <h2 class="section-title">About Me</h2>
-      <p class="section-sub">Who I Am & What I Do</p>
-      <div class="row justify-content-center">
-        <div class="col-md-8">
-          <div class="glass p-4">
-            <p>
-              I'm a dedicated front-end developer with experience in building clean and responsive user interfaces. 
-              I love turning creative ideas into functional, animated, and interactive web pages. 
-              I always aim to deliver polished and user-friendly experiences with smooth animations and modern design trends.
-            </p>
+  <section id="about" class="about-section">
+    <div class="about-container">
+      
+      <div class="about-visual">
+        <div class="glow-sphere"></div>
+        <div class="tech-box">
+          <div class="code-bracket">&lt;/&gt;</div>
+          <span class="floating-icon react-float"><i class="fab fa-react"></i></span>
+          <span class="floating-icon js-float"><i class="fab fa-js"></i></span>
+          <span class="floating-icon tailwind-float"><i class="fab fa-css3"></i></span>
+        </div>
+      </div>
+  
+      <div class="about-content">
+        <h2 class="about-title">About Me</h2>
+        <p class="about-subtitle">Who I Am & What I Do</p>
+        
+        <div class="about-text-card">
+          <p class="animated-text">
+            I'm a dedicated <span class="highlight-text">Front-End Developer</span> with a strong passion for building clean, highly responsive, and user-centric interfaces. 
+          </p>
+          <p class="animated-text">
+            I specialize in transforming creative layouts into pixel-perfect, interactive web applications. My code is crafted to combine top-tier performance with stunning visual animations and modern UI/UX trends.
+          </p>
+        </div>
+  
+        <div class="about-stats">
+          <div class="stat-item">
+            <span class="stat-number">10+</span>
+            <span class="stat-label">Projects Built</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">99%</span>
+            <span class="stat-label">Client Satisfaction</span>
           </div>
         </div>
       </div>
+  
     </div>
   </section>
-
   <!-- ==== Skills ==== -->
-  <section id="skills" class="py-6">
-    <div class="container text-center">
+  <section id="skills" class="skills-section">
+    <div class="section-header">
       <h2 class="section-title">My Skills</h2>
-      <p class="section-sub">Technologies I Work With</p>
-
-      <div class="row g-4">
-        <!-- Each skill -->
-        <div class="col-md-6 col-lg-4">
-          <div class="skill-card">
-            <i class="fab fa-html5 skill-icon"></i>
-            <h5>HTML</h5>
-            <div class="skill-bar"><div class="skill-fill" data-percent="95%"></div></div>
-            <span class="pct-bubble">95%</span>
-          </div>
+      <p class="section-subtitle">Technologies I Work With</p>
+    </div>
+  
+    <div class="skills-container">
+      <!-- HTML -->
+      <div class="skill-card" style="--card-index: 1;">
+        <div class="skill-icon"><i class="fab fa-html5"></i></div>
+        <h3 class="skill-name">HTML</h3>
+        <div class="skill-progress-wrapper">
+          <div class="skill-progress-bar" style="--target-width: 95%;"></div>
         </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="skill-card">
-            <i class="fab fa-css3-alt skill-icon"></i>
-            <h5>CSS</h5>
-            <div class="skill-bar"><div class="skill-fill" data-percent="90%"></div></div>
-            <span class="pct-bubble">90%</span>
-          </div>
+        <span class="skill-percentage">95%</span>
+      </div>
+  
+      <!-- CSS -->
+      <div class="skill-card" style="--card-index: 2;">
+        <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+        <h3 class="skill-name">CSS</h3>
+        <div class="skill-progress-wrapper">
+          <div class="skill-progress-bar" style="--target-width: 90%;"></div>
         </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="skill-card">
-            <i class="fab fa-js skill-icon"></i>
-            <h5>JavaScript</h5>
-            <div class="skill-bar"><div class="skill-fill" data-percent="88%"></div></div>
-            <span class="pct-bubble">88%</span>
-          </div>
+        <span class="skill-percentage">90%</span>
+      </div>
+  
+      <!-- JavaScript -->
+      <div class="skill-card" style="--card-index: 3;">
+        <div class="skill-icon"><i class="fab fa-js-square"></i></div>
+        <h3 class="skill-name">JavaScript</h3>
+        <div class="skill-progress-wrapper">
+          <div class="skill-progress-bar" style="--target-width: 88%;"></div>
         </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="skill-card">
-            <i class="fab fa-bootstrap skill-icon"></i>
-            <h5>Bootstrap</h5>
-            <div class="skill-bar"><div class="skill-fill" data-percent="80%"></div></div>
-            <span class="pct-bubble">80%</span>
-          </div>
+        <span class="skill-percentage">88%</span>
+      </div>
+  
+      <!-- Tailwind CSS -->
+      <div class="skill-card" style="--card-index: 4;">
+        <div class="skill-icon"><i class="fab fa-css3"></i></div> <!-- يمكنك استبدالها بأيقونة مخصصة لاحقاً -->
+        <h3 class="skill-name">Tailwind CSS</h3>
+        <div class="skill-progress-wrapper">
+          <div class="skill-progress-bar" style="--target-width: 92%;"></div>
         </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="skill-card">
-            <i class="fab fa-react skill-icon"></i>
-            <h5>React.js</h5>
-            <div class="skill-bar"><div class="skill-fill" data-percent="85%"></div></div>
-            <span class="pct-bubble">85%</span>
-          </div>
+        <span class="skill-percentage">92%</span>
+      </div>
+  
+      <!-- Bootstrap -->
+      <div class="skill-card" style="--card-index: 5;">
+        <div class="skill-icon"><i class="fab fa-bootstrap"></i></div>
+        <h3 class="skill-name">Bootstrap</h3>
+        <div class="skill-progress-wrapper">
+          <div class="skill-progress-bar" style="--target-width: 80%;"></div>
         </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="skill-card">
-            <i class="fab fa-github skill-icon"></i>
-            <h5>Git & GitHub</h5>
-            <div class="skill-bar"><div class="skill-fill" data-percent="90%"></div></div>
-            <span class="pct-bubble">90%</span>
-          </div>
+        <span class="skill-percentage">80%</span>
+      </div>
+  
+      <!-- React.js -->
+      <div class="skill-card" style="--card-index: 6;">
+        <div class="skill-icon"><i class="fab fa-react"></i></div>
+        <h3 class="skill-name">React.js</h3>
+        <div class="skill-progress-wrapper">
+          <div class="skill-progress-bar" style="--target-width: 85%;"></div>
         </div>
+        <span class="skill-percentage">85%</span>
+      </div>
+  
+      <!-- Next.js -->
+      <div class="skill-card" style="--card-index: 7;">
+        <div class="skill-icon"><i class="fas fa-cubes"></i></div>
+        <h3 class="skill-name">Next.js</h3>
+        <div class="skill-progress-wrapper">
+          <div class="skill-progress-bar" style="--target-width: 78%;"></div>
+        </div>
+        <span class="skill-percentage">78%</span>
+      </div>
+  
+      <!-- Git & GitHub -->
+      <div class="skill-card" style="--card-index: 8;">
+        <div class="skill-icon"><i class="fab fa-github"></i></div>
+        <h3 class="skill-name">Git & GitHub</h3>
+        <div class="skill-progress-wrapper">
+          <div class="skill-progress-bar" style="--target-width: 90%;"></div>
+        </div>
+        <span class="skill-percentage">90%</span>
       </div>
     </div>
   </section>
@@ -174,6 +220,28 @@
           </div>
         </div>
       </div>
+
+
+   
+     <div class="project-card">
+      <div class="project-img">
+        <img src="images/Screenshot (256).png" alt="Terhal Booking Platform">
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">Terhal Booking Platform</h3>
+        <p class="project-description">
+          A comprehensive SaaS travel and hotel booking platform built with React.js and Tailwind CSS. Features dynamic multi-language support (Arabic/English), a smart Dark Mode toggle, an advanced automated inventory control panel, and specialized flows for managing local safari tours and summer offers.
+        </p>
+        <div class="project-links">
+          <a href="https://github.com/abdelnabyeslam95-sketch/travel-saas-platform" target="_blank" class="proj-btn github-btn">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a href="https://abdelnabyeslam95-sketch.github.io/travel-saas-platform/" target="_blank" class="proj-btn live-btn">
+            <i class="fas fa-external-link-alt"></i> Live Demo
+          </a>
+        </div>
+      </div>
+    </div>
   
       <div class="project-card">
         <div class="project-img">
@@ -297,7 +365,6 @@
   </div>
 </div>
 
-
     </div>
   </section>
 
@@ -333,9 +400,9 @@
         <a href="#contact" class="me-3">Contact</a>
       </div>
       <div class="mb-3">
-        <a href="https://www.facebook.com/share/1DgCNn3PFa/" class="social-icon me-3"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.linkedin.com/in/eslam-abdelnaby-054266379?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-icon me-3"><i class="fab fa-linkedin"></i></a>
-        <a href="https://api.github.com/users/eslameee223-alt/repos" class="social-icon me-3"><i class="fab fa-github"></i></a>
+        <a href="https://www.facebook.com/share/14fPfQWocDp/" class="social-icon me-3"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.linkedin.com/in/eslam-abdelnaby-054266379?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="social-icon me-3"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/abdelnabyeslam95-sketch" class="social-icon me-3"><i class="fab fa-github"></i></a>
         <a href="https://wtsi.me/201092568208" class="social-icon me-3"><i class="fab fa-whatsapp"></i></a>
       </div>
       <p class="muted mb-0">&copy; 2025 Eslam Dev. All rights reserved.</p>
