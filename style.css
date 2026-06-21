@@ -716,9 +716,8 @@
 
   gap:35px;
 }
-
 /* =========================
- Card
+   Card
 ========================= */
 
 .project-card{
@@ -738,6 +737,7 @@
   content:"";
   position:absolute;
   inset:0;
+
   background:
   linear-gradient(
     135deg,
@@ -748,6 +748,9 @@
 
   opacity:0;
   transition:.5s;
+
+  /* مهم جداً */
+  pointer-events:none;
 }
 
 .project-card:hover::before{
@@ -765,7 +768,7 @@
 }
 
 /* =========================
- Image
+   Image
 ========================= */
 
 .project-img{
@@ -781,16 +784,20 @@
   transition:.7s ease;
 }
 
-.project-card:hover img{
+.project-card:hover .project-img img{
   transform:scale(1.1);
 }
 
 /* =========================
- Content
+   Content
 ========================= */
 
 .project-content{
   padding:25px;
+
+  /* مهم عشان المحتوى يبقى فوق التأثير */
+  position:relative;
+  z-index:2;
 }
 
 .project-title{
@@ -808,12 +815,14 @@
 }
 
 /* =========================
- Buttons
+   Buttons
 ========================= */
 
 .project-links{
   display:flex;
   gap:15px;
+  position:relative;
+  z-index:3;
 }
 
 .proj-btn{
@@ -829,6 +838,9 @@
   font-weight:600;
 
   transition:.4s;
+
+  position:relative;
+  z-index:3;
 }
 
 /* Github */
@@ -867,6 +879,27 @@
   0 0 15px #00f5ff,
   0 0 30px #00f5ff;
 }
+/* =========================
+ Image
+========================= */
+
+.project-img{
+  overflow:hidden;
+  height:250px;
+}
+
+.project-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+
+  transition:.7s ease;
+}
+
+.project-card:hover img{
+  transform:scale(1.1);
+}
+
 
 /* =========================
  Responsive
