@@ -3,36 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eslam | Front-End Developer</title>
+  <title>Eslam Abdelnaby | Front-End Developer</title>
+  <meta name="description" content="Eslam Abdelnaby — Front-End Developer specializing in React.js, Next.js, TypeScript, and modern UI/UX. View my portfolio and projects." />
+  <meta name="keywords" content="Front-End Developer, React, Next.js, TypeScript, JavaScript, Portfolio, Eslam Abdelnaby" />
+  <meta property="og:title" content="Eslam Abdelnaby | Front-End Developer" />
+  <meta property="og:description" content="Passionate Front-End Developer crafting stunning web experiences." />
 
-  <!-- Bootstrap & Fonts -->
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap & Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <!-- ==== Navbar ==== -->
+
+  <!-- ====== Navbar ====== -->
   <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="#">
+      <a class="navbar-brand d-flex align-items-center" href="#hero">
         <div class="logo-badge me-2">E</div>
-        <span class="brand-text"><span class="accent">Eslam Abdelnaby</span></span>
+        <span class="brand-text"><span class="accent">Eslam</span> Dev</span>
       </a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-        <span class="navbar-toggler-icon"></span>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Toggle navigation">
+        <span class="toggler-bar"></span>
+        <span class="toggler-bar"></span>
+        <span class="toggler-bar"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a href="#hero" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-          <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
-          <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
-          <li class="nav-item"><a href="#experience" class="nav-link">experience</a></li>
-          <li class="nav-item"><a href="#contact-form" class="nav-link">Contact</a></li>
-        
+        <ul class="navbar-nav ms-auto gap-1">
+          <li class="nav-item"><a href="#hero"         class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="#about"        class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#skills"       class="nav-link">Skills</a></li>
+          <li class="nav-item"><a href="#services"     class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="#projects"     class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="#experience"   class="nav-link">Journey</a></li>
+          <li class="nav-item"><a href="#testimonials" class="nav-link">Reviews</a></li>
+          <li class="nav-item"><a href="#contact-form" class="nav-link nav-cta">Hire Me</a></li>
         </ul>
       </div>
 
@@ -40,41 +53,105 @@
     </div>
   </nav>
 
-  <!-- ==== Hero Section ==== -->
+  <!-- ====== Hero Section ====== -->
   <section id="hero" class="hero-section">
-    <div class="container text-center text-lg-start">
+    <canvas id="particles-canvas"></canvas>
+
+    <div class="container text-center text-lg-start hero-content">
       <div class="row align-items-center">
         <div class="col-lg-6 mb-4 mb-lg-0">
-          <h1 class="display-4 fw-bold glow-title">Hi, I’m <span class="name-neon">Eslam Abdelnaby</span></h1>
-          <h3 id="typewriter" class="mt-3"></h3>
-          <p class="lead mt-4">
-            I’m a passionate Front-End Developer specializing in React.js, focused on creating stunning, fast, and interactive web experiences.
-          </p>
-          <div class="hero-buttons mt-4">
-            <a href="#projects" class="btn btn-neon me-2">View My Work</a>
-            <a href="#contact-form" class="btn btn-outline-light">Contact Me</a>
-            <a href="assets/Eslam_Abdelnaby_CV.pdf"
-   download="Eslam_Abdelnaby_CV.pdf"
-   class="btn btn-neon cv-btn">
-    <i class="fas fa-download"></i>
-    Download CV
-</a>
+
+          <div class="hero-badge reveal">
+            <span class="badge-dot"></span>
+            Available for work
           </div>
+
+          <h1 class="display-4 fw-bold glow-title reveal">
+            Hi, I'm<br>
+            <span class="name-neon">Eslam Abdelnaby</span>
+          </h1>
+
+          <h3 id="typewriter" class="mt-3 typewriter-line reveal"></h3>
+
+          <p class="lead mt-4 hero-desc reveal">
+            Passionate Front-End Developer specializing in <strong>React.js</strong>, <strong>Next.js</strong>,
+            and <strong>TypeScript</strong> — crafting stunning, fast, and pixel-perfect web experiences.
+          </p>
+
+          <div class="hero-buttons mt-4 reveal">
+            <a href="#projects" class="btn btn-neon">
+              <i class="fas fa-rocket me-2"></i>View My Work
+            </a>
+            <a href="#contact-form" class="btn btn-ghost">
+              <i class="fas fa-envelope me-2"></i>Contact Me
+            </a>
+            <a href="assets/Eslam_Abdelnaby_CV.pdf" download="Eslam_Abdelnaby_CV.pdf" class="btn btn-neon cv-btn">
+              <i class="fas fa-download me-2"></i>Download CV
+            </a>
+          </div>
+
+          <div class="hero-socials mt-4 reveal">
+            <a href="https://github.com/abdelnabyeslam95-sketch" target="_blank" class="hero-social-icon" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/eslam-abdelnaby-054266379" target="_blank" class="hero-social-icon" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.facebook.com/share/14fPfQWocDp/" target="_blank" class="hero-social-icon" aria-label="Facebook">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://wtsi.me/201092568208" target="_blank" class="hero-social-icon" aria-label="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+
         </div>
+
         <div class="col-lg-6 text-center">
-          <div class="portrait-wrap">
-            <img src="images/IMG-20250418-WA0013.jpg" class="portrait-img" alt="Eslam photo">
+          <div class="portrait-wrap reveal">
+            <div class="portrait-ring"></div>
+            <img src="images/IMG-20250418-WA0013.jpg" class="portrait-img" alt="Eslam Abdelnaby photo">
             <span class="portrait-badge">React Developer</span>
+            <div class="portrait-floating-icon pfi-1"><i class="fab fa-react"></i></div>
+            <div class="portrait-floating-icon pfi-2"><i class="fab fa-js"></i></div>
+            <div class="portrait-floating-icon pfi-3"><i class="fas fa-code"></i></div>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="scroll-indicator">
+      <div class="scroll-dot"></div>
+    </div>
   </section>
 
+  <!-- ====== Stats Bar ====== -->
+  <section class="stats-section">
+    <div class="container stats-grid">
+      <div class="stat-card reveal">
+        <h2><span data-count="10" data-suffix="+">0+</span></h2>
+        <span>Projects Built</span>
+      </div>
+      <div class="stat-card reveal">
+        <h2><span data-count="15" data-suffix="+">0+</span></h2>
+        <span>Technologies</span>
+      </div>
+      <div class="stat-card reveal">
+        <h2><span data-count="3" data-suffix=" Yrs">0</span></h2>
+        <span>Experience</span>
+      </div>
+      <div class="stat-card reveal">
+        <h2><span data-count="100" data-suffix="%">0%</span></h2>
+        <span>Client Satisfaction</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== About Section ====== -->
   <section id="about" class="about-section">
     <div class="about-container">
-      
-      <div class="about-visual">
+
+      <div class="about-visual reveal">
         <div class="glow-sphere"></div>
         <div class="tech-box">
           <div class="code-bracket">&lt;/&gt;</div>
@@ -83,211 +160,264 @@
           <span class="floating-icon tailwind-float"><i class="fab fa-css3"></i></span>
         </div>
       </div>
-  
+
       <div class="about-content">
-        <h2 class="about-title">About Me</h2>
-        <p class="about-subtitle">Who I Am & What I Do</p>
-        
-        <div class="about-text-card">
+        <div class="section-tag reveal">About Me</div>
+        <h2 class="about-title reveal">Who I Am &amp;<br><span class="text-neon">What I Do</span></h2>
+
+        <div class="about-text-card reveal">
           <p class="animated-text">
-            I'm a dedicated <span class="highlight-text">Front-End Developer</span> with a strong passion for building clean, highly responsive, and user-centric interfaces. 
+            I'm a dedicated <span class="highlight-text">Front-End Developer</span> with a strong passion for
+            building clean, highly responsive, and user-centric interfaces. I graduated from the
+            <strong>Higher Technological Institute, Beni Suef</strong> specializing in Information Systems.
           </p>
           <p class="animated-text">
-            I specialize in transforming creative layouts into pixel-perfect, interactive web applications. My code is crafted to combine top-tier performance with stunning visual animations and modern UI/UX trends.
+            I specialize in transforming creative designs into pixel-perfect, interactive web applications
+            using <strong>React.js</strong>, <strong>Next.js</strong>, and <strong>TypeScript</strong>.
+            My code blends top-tier performance with stunning UI/UX.
           </p>
         </div>
-  
+
         <div class="about-stats">
-          <div class="stat-item">
-            <span class="stat-number">10+</span>
+          <div class="stat-item reveal">
+            <span class="stat-number"><span data-count="10" data-suffix="+">0+</span></span>
             <span class="stat-label">Projects Built</span>
           </div>
-          <div class="stat-item">
-            <span class="stat-number">99%</span>
-            <span class="stat-label">Client Satisfaction</span>
+          <div class="stat-item reveal">
+            <span class="stat-number"><span data-count="15" data-suffix="+">0+</span></span>
+            <span class="stat-label">Technologies</span>
+          </div>
+          <div class="stat-item reveal">
+            <span class="stat-number"><span data-count="99" data-suffix="%">0%</span></span>
+            <span class="stat-label">Satisfaction</span>
           </div>
         </div>
       </div>
-  
+
     </div>
   </section>
 
-
-
-  <section class="stats-section">
-    <div class="container">
-  
-      <div class="stat-card">
-        <h2>10+</h2>
-        <span>Projects</span>
-      </div>
-  
-      <div class="stat-card">
-        <h2>15+</h2>
-        <span>Technologies</span>
-      </div>
-  
-      <div class="stat-card">
-        <h2>100%</h2>
-        <span>Responsive</span>
-      </div>
-  
-      <div class="stat-card">
-        <h2>24/7</h2>
-        <span>Support</span>
-      </div>
-  
-    </div>
-  </section>
-
-
-
-
-
-  <!-- ==== Skills ==== -->
+  <!-- ====== Skills Section ====== -->
   <section id="skills" class="skills-section">
     <div class="section-header">
-      <h2 class="section-title">My Skills</h2>
-      <p class="section-subtitle">Technologies I Work With</p>
+      <div class="section-tag reveal">My Arsenal</div>
+      <h2 class="section-title reveal">Skills &amp; Technologies</h2>
+      <p class="section-subtitle reveal">Tools I use to build amazing products</p>
     </div>
-  
+
     <div class="skills-container">
+
       <!-- HTML -->
-      <div class="skill-card" style="--card-index: 1;">
-        <div class="skill-icon"><i class="fab fa-html5"></i></div>
-        <h3 class="skill-name">HTML</h3>
+      <div class="skill-card" style="--card-index:1;">
+        <div class="skill-icon"><i class="fab fa-html5" style="color:#e34f26;"></i></div>
+        <h3 class="skill-name">HTML5</h3>
         <div class="skill-progress-wrapper">
-          <div class="skill-progress-bar" style="--target-width: 95%;"></div>
+          <div class="skill-progress-bar" style="--target-width:95%;"></div>
         </div>
         <span class="skill-percentage">95%</span>
       </div>
-  
+
       <!-- CSS -->
-      <div class="skill-card" style="--card-index: 2;">
-        <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
-        <h3 class="skill-name">CSS</h3>
+      <div class="skill-card" style="--card-index:2;">
+        <div class="skill-icon"><i class="fab fa-css3-alt" style="color:#1572b6;"></i></div>
+        <h3 class="skill-name">CSS3</h3>
         <div class="skill-progress-wrapper">
-          <div class="skill-progress-bar" style="--target-width: 90%;"></div>
+          <div class="skill-progress-bar" style="--target-width:90%;"></div>
         </div>
         <span class="skill-percentage">90%</span>
       </div>
-  
+
       <!-- JavaScript -->
-      <div class="skill-card" style="--card-index: 3;">
-        <div class="skill-icon"><i class="fab fa-js-square"></i></div>
+      <div class="skill-card" style="--card-index:3;">
+        <div class="skill-icon"><i class="fab fa-js-square" style="color:#f7df1e;"></i></div>
         <h3 class="skill-name">JavaScript</h3>
         <div class="skill-progress-wrapper">
-          <div class="skill-progress-bar" style="--target-width: 88%;"></div>
+          <div class="skill-progress-bar" style="--target-width:88%;"></div>
         </div>
         <span class="skill-percentage">88%</span>
       </div>
-  
-      <!-- Tailwind CSS -->
-      <div class="skill-card" style="--card-index: 4;">
-        <div class="skill-icon"><i class="fab fa-css3"></i></div> <!-- يمكنك استبدالها بأيقونة مخصصة لاحقاً -->
-        <h3 class="skill-name">Tailwind CSS</h3>
+
+      <!-- TypeScript -->
+      <div class="skill-card" style="--card-index:4;">
+        <div class="skill-icon ts-icon">TS</div>
+        <h3 class="skill-name">TypeScript</h3>
         <div class="skill-progress-wrapper">
-          <div class="skill-progress-bar" style="--target-width: 92%;"></div>
-        </div>
-        <span class="skill-percentage">92%</span>
-      </div>
-  
-      <!-- Bootstrap -->
-      <div class="skill-card" style="--card-index: 5;">
-        <div class="skill-icon"><i class="fab fa-bootstrap"></i></div>
-        <h3 class="skill-name">Bootstrap</h3>
-        <div class="skill-progress-wrapper">
-          <div class="skill-progress-bar" style="--target-width: 80%;"></div>
+          <div class="skill-progress-bar" style="--target-width:80%;"></div>
         </div>
         <span class="skill-percentage">80%</span>
       </div>
-  
+
       <!-- React.js -->
-      <div class="skill-card" style="--card-index: 6;">
-        <div class="skill-icon"><i class="fab fa-react"></i></div>
+      <div class="skill-card" style="--card-index:5;">
+        <div class="skill-icon"><i class="fab fa-react" style="color:#61dafb;"></i></div>
         <h3 class="skill-name">React.js</h3>
         <div class="skill-progress-wrapper">
-          <div class="skill-progress-bar" style="--target-width: 85%;"></div>
+          <div class="skill-progress-bar" style="--target-width:85%;"></div>
         </div>
         <span class="skill-percentage">85%</span>
       </div>
-  
+
       <!-- Next.js -->
-      <div class="skill-card" style="--card-index: 7;">
-        <div class="skill-icon"><i class="fas fa-cubes"></i></div>
+      <div class="skill-card" style="--card-index:6;">
+        <div class="skill-icon next-icon">N</div>
         <h3 class="skill-name">Next.js</h3>
         <div class="skill-progress-wrapper">
-          <div class="skill-progress-bar" style="--target-width: 78%;"></div>
+          <div class="skill-progress-bar" style="--target-width:78%;"></div>
         </div>
         <span class="skill-percentage">78%</span>
       </div>
-  
-      <!-- Git & GitHub -->
-      <div class="skill-card" style="--card-index: 8;">
-        <div class="skill-icon"><i class="fab fa-github"></i></div>
-        <h3 class="skill-name">Git & GitHub</h3>
+
+      <!-- Tailwind CSS -->
+      <div class="skill-card" style="--card-index:7;">
+        <div class="skill-icon tw-icon">TW</div>
+        <h3 class="skill-name">Tailwind CSS</h3>
         <div class="skill-progress-wrapper">
-          <div class="skill-progress-bar" style="--target-width: 90%;"></div>
+          <div class="skill-progress-bar" style="--target-width:92%;"></div>
+        </div>
+        <span class="skill-percentage">92%</span>
+      </div>
+
+      <!-- Bootstrap -->
+      <div class="skill-card" style="--card-index:8;">
+        <div class="skill-icon"><i class="fab fa-bootstrap" style="color:#7952b3;"></i></div>
+        <h3 class="skill-name">Bootstrap</h3>
+        <div class="skill-progress-wrapper">
+          <div class="skill-progress-bar" style="--target-width:80%;"></div>
+        </div>
+        <span class="skill-percentage">80%</span>
+      </div>
+
+      <!-- Git & GitHub -->
+      <div class="skill-card" style="--card-index:9;">
+        <div class="skill-icon"><i class="fab fa-github"></i></div>
+        <h3 class="skill-name">Git &amp; GitHub</h3>
+        <div class="skill-progress-wrapper">
+          <div class="skill-progress-bar" style="--target-width:90%;"></div>
         </div>
         <span class="skill-percentage">90%</span>
       </div>
+
+      <!-- REST APIs -->
+      <div class="skill-card" style="--card-index:10;">
+        <div class="skill-icon"><i class="fas fa-plug"></i></div>
+        <h3 class="skill-name">REST APIs</h3>
+        <div class="skill-progress-wrapper">
+          <div class="skill-progress-bar" style="--target-width:82%;"></div>
+        </div>
+        <span class="skill-percentage">82%</span>
+      </div>
+
+      <!-- Responsive Design -->
+      <div class="skill-card" style="--card-index:11;">
+        <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
+        <h3 class="skill-name">Responsive UI</h3>
+        <div class="skill-progress-wrapper">
+          <div class="skill-progress-bar" style="--target-width:95%;"></div>
+        </div>
+        <span class="skill-percentage">95%</span>
+      </div>
+
+      <!-- Figma -->
+      <div class="skill-card" style="--card-index:12;">
+        <div class="skill-icon"><i class="fab fa-figma" style="color:#a259ff;"></i></div>
+        <h3 class="skill-name">Figma / UI Design</h3>
+        <div class="skill-progress-wrapper">
+          <div class="skill-progress-bar" style="--target-width:75%;"></div>
+        </div>
+        <span class="skill-percentage">75%</span>
+      </div>
+
     </div>
   </section>
 
+  <!-- ====== Services Section ====== -->
+  <section id="services" class="services-section">
+    <div class="section-header">
+      <div class="section-tag reveal">What I Offer</div>
+      <h2 class="section-title reveal">My Services</h2>
+      <p class="section-subtitle reveal">Solutions I deliver to clients &amp; projects</p>
+    </div>
 
-  
-  <section id="services">
-
-    <h2 class="section-title">
-    My Services
-    </h2>
-    
     <div class="services-grid">
-    
-    <div class="service-card">
-    <i class="fas fa-code"></i>
-    <h3>Web Development</h3>
-    <p>Modern Websites</p>
-    </div>
-    
-    <div class="service-card">
-    <i class="fas fa-mobile-alt"></i>
-    <h3>Responsive Design</h3>
-    <p>All Devices Support</p>
-    </div>
-    
-    <div class="service-card">
-    <i class="fas fa-rocket"></i>
-    <h3>Optimization</h3>
-    <p>Fast Performance</p>
-    </div>
-    
-    </div>
-    
-    </section>
 
-  <!-- ==== Projects ==== -->
-
-  <section id="projects" class="projects">
-    <h2>My Latest Projects</h2>
-    
-    <div class="projects-container">
-      
-      <div class="project-card">
-        <div class="project-tech">
-          <span>HTML5</span>
-          <span>CSS3</span>
-          <span>JavaScript</span>
-          <span>Responsive Design</span>
+      <div class="service-card reveal">
+        <div class="service-icon-wrap">
+          <i class="fas fa-code"></i>
+        </div>
+        <h3>Web Development</h3>
+        <p>Building modern, fast, and scalable web applications using React.js, Next.js, and TypeScript with clean, maintainable code.</p>
+        <ul class="service-features">
+          <li><i class="fas fa-check"></i> React &amp; Next.js Apps</li>
+          <li><i class="fas fa-check"></i> TypeScript Integration</li>
+          <li><i class="fas fa-check"></i> API Integration</li>
+        </ul>
       </div>
-        
+
+      <div class="service-card reveal">
+        <div class="service-icon-wrap">
+          <i class="fas fa-mobile-alt"></i>
+        </div>
+        <h3>Responsive Design</h3>
+        <p>Crafting pixel-perfect interfaces that look stunning on every device — from mobile to ultra-wide screens.</p>
+        <ul class="service-features">
+          <li><i class="fas fa-check"></i> Mobile-First Approach</li>
+          <li><i class="fas fa-check"></i> Cross-Browser Support</li>
+          <li><i class="fas fa-check"></i> Tailwind &amp; Bootstrap</li>
+        </ul>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon-wrap">
+          <i class="fas fa-rocket"></i>
+        </div>
+        <h3>Performance Optimization</h3>
+        <p>Optimizing web apps for blazing-fast load times, smooth animations, and excellent Core Web Vitals scores.</p>
+        <ul class="service-features">
+          <li><i class="fas fa-check"></i> Code Splitting</li>
+          <li><i class="fas fa-check"></i> Lazy Loading</li>
+          <li><i class="fas fa-check"></i> SEO Friendly</li>
+        </ul>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon-wrap">
+          <i class="fas fa-paint-brush"></i>
+        </div>
+        <h3>UI/UX Implementation</h3>
+        <p>Transforming Figma designs into stunning, interactive interfaces with smooth micro-animations and polished UX.</p>
+        <ul class="service-features">
+          <li><i class="fas fa-check"></i> Figma to Code</li>
+          <li><i class="fas fa-check"></i> Micro-Animations</li>
+          <li><i class="fas fa-check"></i> Glassmorphism UI</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====== Projects Section ====== -->
+  <section id="projects" class="projects">
+    <div class="section-header">
+      <div class="section-tag reveal">My Work</div>
+      <h2 class="section-title reveal">Latest Projects</h2>
+      <p class="section-subtitle reveal">A selection of projects I've built with passion</p>
+    </div>
+
+    <div class="projects-container">
+
+      <div class="project-card reveal">
+        <div class="project-tech">
+          <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Responsive</span>
+        </div>
         <div class="project-img">
-          <img src="images\download (1).jpg" alt="E-Shop E-Commerce">
+          <img src="images/download (1).jpg" alt="Eazy_Bank Landing Page">
+          <div class="project-overlay"><i class="fas fa-eye"></i></div>
         </div>
         <div class="project-content">
-          <h3 class="project-title">ُEazy_Bank</h3>
+          <h3 class="project-title">Eazy_Bank</h3>
           <p class="project-description">
-            A modern digital banking landing page built with semantic HTML5, CSS Grid/Flexbox, and Vanilla JavaScript. Features a fully responsive mobile navigation menu, smooth fade animations, and a pixel-perfect design.
+            A modern digital banking landing page built with semantic HTML5, CSS Grid/Flexbox, and Vanilla JavaScript.
+            Features fully responsive navigation, smooth fade animations, and pixel-perfect design.
           </p>
           <div class="project-links">
             <a href="https://github.com/abdelnabyeslam95-sketch/eazy_bank" target="_blank" class="proj-btn github-btn">
@@ -300,52 +430,44 @@
         </div>
       </div>
 
-
-   
-     <div class="project-card">
-
-      <div class="project-tech">
-        <span>React.js</span>
-        <span>Tailwind CSS</span>
-        <span>Dark Mode</span>
-    </div>
-
-      <div class="project-img">
-        <img src="images/Screenshot (256).png" alt="Terhal Booking Platform">
-      </div>
-   <div class="project-content">
-    <h3 class="project-title">Terhal Booking Platform</h3>
-    <p class="project-description">
-        A comprehensive SaaS travel and hotel booking platform built with React.js and Tailwind CSS. Features dynamic multi-language support (Arabic/English), a smart Dark Mode toggle, an advanced automated inventory control panel, and specialized flows for managing local safari tours and summer offers.
-    </p>
-
-    <div class="project-links">
-        <a href="https://github.com/abdelnabyeslam95-sketch/travel-saas-platform" target="_blank" class="proj-btn github-btn">
-          <i class="fab fa-github"></i> GitHub
-        </a>
-        <a href="https://abdelnabyeslam95-sketch.github.io/travel-saas-platform/" target="_blank" class="proj-btn live-btn">
-          <i class="fas fa-external-link-alt"></i> Live Demo
-        </a>
-    </div>
-</div>
-    </div>
-  
-      <div class="project-card">
+      <div class="project-card reveal">
         <div class="project-tech">
-          <span>React.js</span>
-          <span>Tailwind CSS</span>
-          <span>ERP System</span>
-          <span>Dashboard</span>
-          <span>Responsive UI</span>
+          <span>React.js</span><span>Tailwind CSS</span><span>Dark Mode</span><span>i18n</span>
+        </div>
+        <div class="project-img">
+          <img src="images/Screenshot (256).png" alt="Terhal Booking Platform">
+          <div class="project-overlay"><i class="fas fa-eye"></i></div>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Terhal Booking Platform</h3>
+          <p class="project-description">
+            A comprehensive SaaS travel and hotel booking platform with dynamic multi-language support (Arabic/English),
+            smart Dark Mode toggle, advanced inventory control panel, and safari tours management.
+          </p>
+          <div class="project-links">
+            <a href="https://github.com/abdelnabyeslam95-sketch/travel-saas-platform" target="_blank" class="proj-btn github-btn">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://abdelnabyeslam95-sketch.github.io/travel-saas-platform/" target="_blank" class="proj-btn live-btn">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+          </div>
+        </div>
       </div>
 
+      <div class="project-card reveal">
+        <div class="project-tech">
+          <span>React.js</span><span>Tailwind CSS</span><span>ERP</span><span>Dashboard</span>
+        </div>
         <div class="project-img">
           <img src="images/gettyimages-621719576-612x612.jpg" alt="UNI-SYS ERP">
+          <div class="project-overlay"><i class="fas fa-eye"></i></div>
         </div>
         <div class="project-content">
           <h3 class="project-title">UNI-SYS ERP System</h3>
           <p class="project-description">
-            An advanced University Management ERP solution built with React.js and Tailwind CSS. Features professional UI components, role-based dashboards for admins, doctors, and students with highly responsive tables and analytics.
+            An advanced University Management ERP solution with role-based dashboards for admins, doctors, and students.
+            Features professional UI components, analytics, and responsive data tables.
           </p>
           <div class="project-links">
             <a href="https://github.com/abdelnabyeslam95-sketch/Uni_System" target="_blank" class="proj-btn github-btn">
@@ -357,51 +479,45 @@
           </div>
         </div>
       </div>
-  
-      <div class="project-card">
-        <div class="project-tech">
-          <span>HTML5</span>
-          <span>CSS3</span>
-          <span>JavaScript</span>
-          <span>Bootstrap</span>
-      </div>
 
+      <div class="project-card reveal">
+        <div class="project-tech">
+          <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Bootstrap</span>
+        </div>
         <div class="project-img">
-          <img src="images/WhatsApp Image 2025-10-11 at 18.11.06_61df944f.jpg" alt="Al-Andalus Shipping">
+          <img src="images/WhatsApp Image 2025-10-11 at 18.11.06_61df944f.jpg" alt="Academia Plus">
+          <div class="project-overlay"><i class="fas fa-eye"></i></div>
         </div>
         <div class="project-content">
           <h3 class="project-title">Academia_Plus</h3>
           <p class="project-description">
-            A dynamic programming courses platform built with HTML5, CSS3, Vanilla JavaScript, and Bootstrap. Features an organized educational layout, course filtering, interactive learning sections, and a fully responsive design for students.
+            A dynamic programming courses platform with organized educational layout, course filtering,
+            interactive learning sections, and fully responsive design for students.
           </p>
           <div class="project-links">
             <a href="https://github.com/abdelnabyeslam95-sketch/academia_plus" target="_blank" class="proj-btn github-btn">
               <i class="fab fa-github"></i> GitHub
             </a>
-            <a href="https://abdelnabyeslam95-sketch.github.io/academia_plus/" target="_blank" class="proj-btn live-btn">
+            <a href="https://academia-plus.qafza.tech/en" target="_blank" class="proj-btn live-btn">
               <i class="fas fa-external-link-alt"></i> Live Demo
             </a>
           </div>
         </div>
       </div>
-  
-      <div class="project-card">
 
+      <div class="project-card reveal">
         <div class="project-tech">
-          <span>React.js</span>
-          <span>Tailwind CSS</span>
-          <span>E-Commerce</span>
-          <span>Shopping Cart</span>
-          <span>Product Filters</span>
-      </div>
-
+          <span>React.js</span><span>Tailwind CSS</span><span>E-Commerce</span><span>Cart</span>
+        </div>
         <div class="project-img">
-          <img src="images/kobe-collection-v0-qzmcaahqk6me1.webp" alt="Cinematic App">
+          <img src="images/kobe-collection-v0-qzmcaahqk6me1.webp" alt="E-Shop">
+          <div class="project-overlay"><i class="fas fa-eye"></i></div>
         </div>
         <div class="project-content">
-          <h3 class="project-title">ُE-Shop</h3>
+          <h3 class="project-title">E-Shop</h3>
           <p class="project-description">
-            A dynamic e-commerce and shopping interface powered by React.js and Tailwind CSS. Implements detailed categories, custom product filters, fluid search functionality, and full shopping cart configurations.
+            A dynamic e-commerce interface with detailed categories, custom product filters,
+            fluid search functionality, and full shopping cart configurations.
           </p>
           <div class="project-links">
             <a href="https://github.com/abdelnabyeslam95-sketch/e_shop" target="_blank" class="proj-btn github-btn">
@@ -413,23 +529,20 @@
           </div>
         </div>
       </div>
-  
-      <div class="project-card">
 
+      <div class="project-card reveal">
         <div class="project-tech">
-          <span>React.js</span>
-          <span>CRUD Operations</span>
-          <span>Local Storage</span>
-          <span>Responsive Design</span>
-      </div>
-
+          <span>React.js</span><span>CRUD</span><span>Local Storage</span><span>State Mgmt</span>
+        </div>
         <div class="project-img">
-          <img src="https://images.unsplash.com/photo-1540350394557-8d14678e7f91?w=600" alt="To-Do List App">
+          <img src="https://images.unsplash.com/photo-1540350394557-8d14678e7f91?w=600" alt="Advanced To-Do List">
+          <div class="project-overlay"><i class="fas fa-eye"></i></div>
         </div>
         <div class="project-content">
           <h3 class="project-title">Advanced To-Do List</h3>
           <p class="project-description">
-            A fully interactive task management web application built to master state management in React. Features dynamic CRUD operations, local storage persistence, and beautiful UI filters.
+            A fully interactive task management app built to master state management in React.
+            Features dynamic CRUD operations, local storage persistence, and UI filters.
           </p>
           <div class="project-links">
             <a href="https://github.com/abdelnabyeslam95-sketch/to-do-list" target="_blank" class="proj-btn github-btn">
@@ -441,24 +554,20 @@
           </div>
         </div>
       </div>
-  
-      <div class="project-card">
 
+      <div class="project-card reveal">
         <div class="project-tech">
-          <span>React.js</span>
-          <span>Tailwind CSS</span>
-          <span>Healthcare</span>
-          <span>Dashboard</span>
-          <span>Consultation System</span>
-      </div>
-
+          <span>React.js</span><span>Tailwind CSS</span><span>Healthcare</span><span>Dashboard</span>
+        </div>
         <div class="project-img">
-          <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=600" alt="PharmaCare Dashboard">
+          <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=600" alt="PharmaCare Portal">
+          <div class="project-overlay"><i class="fas fa-eye"></i></div>
         </div>
         <div class="project-content">
           <h3 class="project-title">PharmaCare Portal</h3>
           <p class="project-description">
-            A professional pharmacy management and consultancy system that merges medical logistics with custom modern icon layouts, consultation forms, and prescription uploaded management.
+            A professional pharmacy management system merging medical logistics with modern icon layouts,
+            consultation forms, and prescription upload management.
           </p>
           <div class="project-links">
             <a href="https://github.com/abdelnabyeslam95-sketch/Pharmacy" target="_blank" class="proj-btn github-btn">
@@ -470,235 +579,306 @@
           </div>
         </div>
       </div>
-  
-      
-<div class="project-card">
 
-  <div class="project-tech">
-    <span>HTML5</span>
-    <span>CSS3</span>
-    <span>JavaScript</span>
-    <span>Restaurant System</span>
-    <span>Reservation System</span>
-</div>
-
-  <div class="project-img">
-    
-    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600" alt="Restaurant System">
-  </div>
-  <div class="project-content">
-    <h3 class="project-title">Restaurant Management System</h3>
-    <p class="project-description">
-      An interactive restaurant platform built with HTML5, CSS3, and Vanilla JavaScript. Features a dynamic food menu with custom category filtering, a real-time responsive order simulation, and a smooth table reservation interface.
-    </p>
-    <div class="project-links">
-      <a href="https://github.com/abdelnabyeslam95-sketch/restaurant-system" target="_blank" class="proj-btn github-btn">
-        <i class="fab fa-github"></i> GitHub
-      </a>
-      <a href="https://abdelnabyeslam95-sketch.github.io/restaurant-system/" target="_blank" class="proj-btn live-btn">
-        <i class="fas fa-external-link-alt"></i> Live Demo
-      </a>
-    </div>
-  </div>
-</div>
+      <div class="project-card reveal">
+        <div class="project-tech">
+          <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Restaurant</span>
+        </div>
+        <div class="project-img">
+          <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600" alt="Restaurant Management">
+          <div class="project-overlay"><i class="fas fa-eye"></i></div>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Restaurant Management</h3>
+          <p class="project-description">
+            An interactive restaurant platform with dynamic menu filtering, real-time order simulation,
+            and a smooth table reservation interface.
+          </p>
+          <div class="project-links">
+            <a href="https://github.com/abdelnabyeslam95-sketch/restaurant-system" target="_blank" class="proj-btn github-btn">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://abdelnabyeslam95-sketch.github.io/restaurant-system/" target="_blank" class="proj-btn live-btn">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
 
     </div>
   </section>
 
+  <!-- ====== Experience / Timeline ====== -->
+  <section id="experience" class="experience-section">
+    <div class="section-header">
+      <div class="section-tag reveal">My Story</div>
+      <h2 class="section-title reveal">Career Journey</h2>
+      <p class="section-subtitle reveal">From learner to professional developer</p>
+    </div>
 
-  
-  <section id="experience">
-
-    <h2 class="section-title">
-      Career Journey
-    </h2>
-  
     <div class="timeline">
-  
-      <div class="timeline-item">
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2023</div>
         <h3>Started Learning Programming</h3>
-        <span>2023</span>
-        <p>
-          Began my journey in software development by learning programming fundamentals, problem solving, and web technologies.
-        </p>
+        <p>Began my journey in software development by learning programming fundamentals, problem solving, and web technologies.</p>
       </div>
-  
-      <div class="timeline-item">
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2024</div>
         <h3>Front-End Development Track</h3>
-        <span>2024</span>
-        <p>
-          Focused on HTML5, CSS3, JavaScript, Bootstrap, and responsive web design while building multiple practice projects.
-        </p>
+        <p>Focused on HTML5, CSS3, JavaScript, Bootstrap, and responsive web design while building multiple practice projects.</p>
       </div>
-  
-      <div class="timeline-item">
-        <h3>React.js Developer</h3>
-        <span>2025</span>
-        <p>
-          Built modern React.js applications and worked on advanced dashboards, ERP systems, SaaS platforms, and e-commerce projects.
-        </p>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2025</div>
+        <h3>React.js &amp; Next.js Developer</h3>
+        <p>Built modern React.js &amp; Next.js applications, advanced dashboards, ERP systems, SaaS platforms, and e-commerce projects.</p>
       </div>
-  
-      <div class="timeline-item">
-        <h3>Freelance & Personal Projects</h3>
-        <span>2025 - Present</span>
-        <p>
-          Developed complete web applications and responsive interfaces while expanding my portfolio with real-world projects.
-        </p>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2025 – Now</div>
+        <h3>Freelance &amp; Real Projects</h3>
+        <p>Developed complete web applications and responsive interfaces while expanding my portfolio with real-world projects.</p>
       </div>
-  
-      <div class="timeline-item">
-        <h3>Graduation</h3>
-        <span>2026</span>
-        <p>
-          Graduated from the Higher Technological Institute, Beni Suef, with a specialization in Information Systems.
-        </p>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2026</div>
+        <h3>🎓 Graduation</h3>
+        <p>Graduated from the Higher Technological Institute, Beni Suef, with a specialization in Information Systems.</p>
       </div>
-  
-      <div class="timeline-item">
-        <h3>Looking For New Opportunities</h3>
-        <span>2026 - Present</span>
-        <p>
-          Seeking Front-End Developer opportunities to contribute to innovative projects and continue growing professionally.
-        </p>
+
+      <div class="timeline-item reveal highlight-timeline">
+        <div class="timeline-dot pulse-dot"></div>
+        <div class="timeline-date">2026 – Present</div>
+        <h3>🚀 Open to Opportunities</h3>
+        <p>Seeking Front-End Developer roles to contribute to innovative products and continue growing as a professional.</p>
       </div>
-  
+
     </div>
-  
   </section>
 
+  <!-- ====== Testimonials Section ====== -->
+  <section id="testimonials" class="testimonials-section">
+    <div class="section-header">
+      <div class="section-tag reveal">Social Proof</div>
+      <h2 class="section-title reveal">What People Say</h2>
+      <p class="section-subtitle reveal">Feedback from collaborators and clients</p>
+    </div>
 
-
-
-  <section class="cta-section">
-
-    <h2>
-    Let's Build Something Amazing
-    </h2>
-    
-    <p>
-    Ready to turn your idea into reality?
-    </p>
-    
-    <a href="#contact-form" class="btn btn-accent px-4" >
-    Start Project
-    </a>
-    
-    </section>
-
-
-    <form id="contact-form" class="contact-form col-md-8 mx-auto">
-
-      <div class="mb-3">
-        <input
-          type="text"
-          name="user_name"
-          class="form-control"
-          placeholder="Your Name"
-          required>
-      </div>
-    
-      <div class="mb-3">
-        <input
-          type="email"
-          name="user_email"
-          class="form-control"
-          placeholder="Your Email"
-          required>
-      </div>
-    
-      <div class="mb-3">
-        <textarea
-          name="message"
-          class="form-control"
-          rows="5"
-          placeholder="Your Message"
-          required></textarea>
-      </div>
-    
-      <button type="submit" class="btn btn-accent px-4">
-        <i class="fas fa-paper-plane"></i>
-        Send Message
+    <div class="testimonials-wrapper">
+      <button id="t-prev" class="t-nav t-prev" aria-label="Previous testimonial">
+        <i class="fas fa-chevron-left"></i>
       </button>
-    
-    </form>
 
-  <!-- ==== Footer ==== -->
-  <footer class="py-4 text-center">
+      <div class="testimonials-track">
+
+        <div class="testimonial-slide reveal">
+          <div class="testimonial-card">
+            <div class="t-quote"><i class="fas fa-quote-left"></i></div>
+            <p>"Eslam has an incredible eye for detail and delivered exactly what we envisioned — the UI was stunning and the code was clean. Highly recommend!"</p>
+            <div class="t-author">
+              <div class="t-avatar">A</div>
+              <div>
+                <strong>Ahmed Hassan</strong>
+                <span>Project Collaborator</span>
+              </div>
+            </div>
+            <div class="t-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-slide reveal">
+          <div class="testimonial-card">
+            <div class="t-quote"><i class="fas fa-quote-left"></i></div>
+            <p>"Working with Eslam was a pleasure. He understood the requirements perfectly and delivered a responsive, pixel-perfect interface ahead of schedule."</p>
+            <div class="t-author">
+              <div class="t-avatar">M</div>
+              <div>
+                <strong>Mohamed Samir</strong>
+                <span>Team Lead – Terhal Platform</span>
+              </div>
+            </div>
+            <div class="t-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-slide reveal">
+          <div class="testimonial-card">
+            <div class="t-quote"><i class="fas fa-quote-left"></i></div>
+            <p>"Eslam's React.js skills are top-notch. He built our ERP dashboard with great attention to performance and user experience. Great developer to work with!"</p>
+            <div class="t-author">
+              <div class="t-avatar">S</div>
+              <div>
+                <strong>Sara Ahmed</strong>
+                <span>Academic Project Partner</span>
+              </div>
+            </div>
+            <div class="t-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <button id="t-next" class="t-nav t-next" aria-label="Next testimonial">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <div class="t-dots">
+      <button class="t-dot" aria-label="Slide 1"></button>
+      <button class="t-dot" aria-label="Slide 2"></button>
+      <button class="t-dot" aria-label="Slide 3"></button>
+    </div>
+  </section>
+
+  <!-- ====== CTA Section ====== -->
+  <section class="cta-section">
+    <div class="cta-inner reveal">
+      <div class="cta-glow"></div>
+      <h2>Let's Build Something <span class="text-neon">Amazing</span> Together</h2>
+      <p>Ready to turn your idea into reality? I'm available for freelance projects &amp; full-time roles.</p>
+      <div class="cta-buttons">
+        <a href="#contact-form" class="btn btn-neon">
+          <i class="fas fa-paper-plane me-2"></i>Start a Project
+        </a>
+        <a href="assets/Eslam_Abdelnaby_CV.pdf" download class="btn btn-ghost">
+          <i class="fas fa-download me-2"></i>Download CV
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Contact Section ====== -->
+  <section id="contact" class="contact-section">
+    <div class="section-header">
+      <div class="section-tag reveal">Get In Touch</div>
+      <h2 class="section-title reveal">Contact Me</h2>
+      <p class="section-subtitle reveal">Send me a message and I'll get back to you within 24 hours</p>
+    </div>
+
+    <div class="contact-wrapper">
+      <div class="contact-info reveal">
+        <h3>Let's connect!</h3>
+        <p>Whether you have a project in mind, want to collaborate, or just say hi — my inbox is always open.</p>
+
+        <div class="contact-detail">
+          <div class="cd-icon"><i class="fas fa-envelope"></i></div>
+          <div>
+            <span>Email</span>
+            <strong>abdelnabyeslam95@gmail.com</strong>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="cd-icon"><i class="fab fa-whatsapp"></i></div>
+          <div>
+            <span>WhatsApp</span>
+            <strong><a href="https://wtsi.me/201092568208" target="_blank">+20 109 256 8208</a></strong>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="cd-icon"><i class="fab fa-linkedin"></i></div>
+          <div>
+            <span>LinkedIn</span>
+            <strong><a href="https://www.linkedin.com/in/eslam-abdelnaby-054266379" target="_blank">Eslam Abdelnaby</a></strong>
+          </div>
+        </div>
+
+        <div class="contact-social-links">
+          <a href="https://github.com/abdelnabyeslam95-sketch" target="_blank" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/eslam-abdelnaby-054266379" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.facebook.com/share/14fPfQWocDp/" target="_blank" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="https://wtsi.me/201092568208" target="_blank" class="social-icon" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <form id="contact-form" class="contact-form reveal">
+        <div class="form-group">
+          <input type="text" name="user_name" class="form-control" placeholder="Your Name" required id="contact-name" />
+        </div>
+        <div class="form-group">
+          <input type="email" name="user_email" class="form-control" placeholder="Your Email" required id="contact-email" />
+        </div>
+        <div class="form-group">
+          <input type="text" name="user_subject" class="form-control" placeholder="Subject" id="contact-subject" />
+        </div>
+        <div class="form-group">
+          <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required id="contact-message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-neon w-100" id="submit-btn">
+          <i class="fas fa-paper-plane me-2"></i>Send Message
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ====== Footer ====== -->
+  <footer class="py-5">
     <div class="container">
-      <div class="mb-3">
-        <a href="#hero" class="me-3">Home</a>
-        <a href="#about" class="me-3">About</a>
-        <a href="#skills" class="me-3">Skills</a>
-        <a href="#projects" class="me-3">Projects</a>
-        <a href="#contact" class="me-3">Contact</a>
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo-badge me-2">E</div>
+          <span class="brand-text"><span class="accent">Eslam</span> Abdelnaby</span>
+        </div>
+        <p class="footer-desc">Front-End Developer crafting stunning, performant web experiences.</p>
       </div>
-      <div class="mb-3">
-        <a href="https://www.facebook.com/share/14fPfQWocDp/" class="social-icon me-3"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.linkedin.com/in/eslam-abdelnaby-054266379?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="social-icon me-3"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/abdelnabyeslam95-sketch" class="social-icon me-3"><i class="fab fa-github"></i></a>
-        <a href="https://wtsi.me/201092568208" class="social-icon me-3"><i class="fab fa-whatsapp"></i></a>
+
+      <div class="footer-nav">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Journey</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#contact-form">Contact</a>
       </div>
-      <p class="muted mb-0">&copy; 2025 Eslam Dev. All rights reserved.</p>
+
+      <div class="footer-social">
+        <a href="https://www.facebook.com/share/14fPfQWocDp/" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.linkedin.com/in/eslam-abdelnaby-054266379" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/abdelnabyeslam95-sketch" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://wtsi.me/201092568208" class="social-icon" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Eslam Abdelnaby. All rights reserved. Built with ❤️ &amp; passion.</p>
+      </div>
     </div>
   </footer>
+
+  <!-- Back to Top -->
+  <button id="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
 
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="script.js"></script>
 
-<script>
-
-emailjs.init({
-    publicKey: "psOy-rttq8bzPh_z8"
-});
-
-const form = document.getElementById("contact-form");
-
-form.addEventListener("submit", function(e){
-
-    e.preventDefault();
-
-    const button = form.querySelector("button");
-
-    button.disabled = true;
-    button.innerHTML = "Sending...";
-
-    emailjs.sendForm(
-        "service_vvpomwr",
-        "template_609hrxb",
-        form
-    )
-    .then(() => {
-
-        alert("Message sent successfully!");
-
-        form.reset();
-
-        button.disabled = false;
-        button.innerHTML = `
-            <i class="fas fa-paper-plane"></i>
-            Send Message
-        `;
-
-    })
-    .catch((error) => {
-
-        console.error(error);
-
-        alert("Failed to send message.");
-
-        button.disabled = false;
-        button.innerHTML = `
-            <i class="fas fa-paper-plane"></i>
-            Send Message
-        `;
-
+  <script>
+    // Back to top
+    const backBtn = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      backBtn.classList.toggle('visible', window.scrollY > 500);
     });
+    backBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
 
-});
-
-</script>
 </body>
 </html>
